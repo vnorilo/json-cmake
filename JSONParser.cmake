@@ -144,7 +144,7 @@ macro(_sbeParseNameValue prefix)
                 string(SUBSTRING "${json_string}" ${json_index} 1 json_char)
             endif()
         
-            set(json_name "${json_name}${json_char}")
+            string(APPEND json_name "${json_char}")
         endif()
         
         # check if name starts
